@@ -1,0 +1,246 @@
+/* Tablet Devices */
+#home-section .home-content h1{
+    font-size: 50px;
+}
+
+#blog-section .blog-posts{
+    grid-template-columns: 1fr;
+} 
+
+@media(max-width: 600px){
+     /* Utility Classes */
+     .hide-mobile{
+        /* display: none !important; */
+    }
+
+    .show-mobile{
+        display: block;
+    }
+
+    .btn.btn-large{
+        font-size: 16px;
+        padding: 10px;
+        width: 200px;
+    }
+
+    /* Navbar */
+    #navbar{
+        top: 0;
+        padding: 15px 20px;
+    }
+
+    #navbar .menu-bar img{
+        height: 15px;
+        width: 25px;
+    }
+
+    #navbar #nav-menu{
+        background-color: var(--primary-color-dark);
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        padding-left: 0;
+        position: absolute;
+        left: 0;
+        top: 54px;
+        transition: all 0.5s linear;
+        width: 100%;
+        visibility: hidden;
+        z-index: 10;
+    }
+
+    #navbar #nav-menu.active{
+        max-height: 500px;
+        visibility: visible;
+    }
+
+    #navbar #nav-menu li{
+        padding-bottom: 15px;
+    }
+
+   #navbar #nav-menu li:first-child{
+       padding-top: 22px;
+   }
+
+   #navbar #nav-menu li:last-child{
+       padding-bottom: 22px;
+   }
+
+   #navbar #nav-menu li a{
+       padding: 15px;
+       text-align: center;
+   }
+
+   #home-section .home-content h1{
+    font-size: 40px;
+    }
+
+    #home-section .home-content h2{
+        font-size: 30px;
+    }
+
+    #about-section .about-inner-content .about-skills{
+        padding: 5px;
+    }
+
+    .about-skills .skill-item{
+        margin-bottom: 13px;
+    }    
+
+    .about-skills .skill-item .skill-tag{
+        line-height: 2;
+        font-size: 10px;
+        padding: 0 16px;
+    }
+
+    .about-skills .skill-item progress{
+        height: 20px;
+    }
+
+    .about-skills .skill-item #html-progress::after{
+        content: "";
+    }
+    
+    .about-skills .skill-item #css-progress::after{
+        content: "";
+    }
+    
+    .about-skills .skill-item #bootstrap-progress::after{
+        content: "";
+    }
+    
+    .about-skills .skill-item #sass-progress::after{
+        content: "";
+    }
+    
+    .about-skills .skill-item #js-progress::after{
+        content: "";
+    }
+    
+    .about-skills .skill-item #react-progress::after{
+        content: "";
+    }
+
+    .about-skills .skill-item #python-progress::after{
+        content: "";
+    }
+
+    #about-section .about-features{
+        margin-top: 45px;
+    }
+
+    .section-title{
+        font-size: 30px;
+    }
+
+    .about-inner-content .about-bio p{
+        padding: 0;
+    }
+
+    #about-section .about-inner-content > div h3{
+        margin-top: 15px;
+    }
+
+    #about-section .about-inner-content > div{
+        padding: 15px;
+    }
+
+    #blog-section{
+        padding: 20px 15px;
+    }
+}
+
+@media(max-height: 320px){
+    #navbar{
+        top: 0;
+        padding: 10px 15px;
+    }
+
+    #navbar #nav-menu{
+        top: 44px;
+    }
+
+    #navbar #nav-menu li:first-child{
+        padding-top: 10px;
+    }
+ 
+    #navbar #nav-menu li:last-child{
+        padding-bottom: 10px;
+    }
+
+    #navbar #nav-menu li{
+        padding-bottom: 5px;
+    }
+
+    #navbar #nav-menu li a{
+        padding: 8px;
+    }
+}
+
+@media(max-width: 565px){
+  
+}
+
+@media(max-width: 515px){
+   
+}
+
+/* Mobile Devices */
+@media(max-width: 500px){
+    #about-section{
+        padding: 0;
+    }
+
+   #home-section .home-content h1{
+        font-size: 30px;
+    }
+
+   #home-section .home-content h2{
+        font-size: 25px;
+    }
+
+    /* About Section */
+    #about-section .about-features{
+        grid-gap: 30px 0;
+    }
+
+    .about-features .feature-item{
+        padding: 3px;
+    }
+
+    .about-features .feature-item h3{
+        font-size: 17px;
+    }
+
+    .about-features .feature-item p{
+        font-size: 12px;
+    }
+
+    .about-features .feature-item .feature-icon{
+        height: 80px;
+        line-height: 90px;
+        width: 80px;
+    }
+
+    .about-features .feature-item .feature-icon i{
+        font-size: 25px;
+    }
+
+    #about-section .about-inner-content > div h3{
+        font-size: 18px;
+    }
+
+    .about-inner-content .about-bio p{
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 320px){
+    #home-section .home-content h1{
+        font-size: 26px;
+    }
+
+   #home-section .home-content h2{
+        font-size: 20px;
+    }
+}

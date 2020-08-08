@@ -1,0 +1,717 @@
+/* Raleway Regular Font */
+@font-face{
+    src: url('../assets/fonts/Raleway-Regular.ttf');
+    font-family: 'Raleway Regular';
+    font-weight: 400;
+}
+
+/* Raleway Bold */
+@font-face{
+    src: url('../assets/fonts/Raleway-Bold.ttf');
+    font-family: 'Raleway Bold';
+    font-weight: 700;
+}
+
+:root{
+    --primary-color-light: #6daffe;
+    --primary-color-dark: #437fc7;
+    --light-color: #edf6ff;
+    --dark-color: #181818;
+}
+
+/* Base Styles */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: var(--dark-color);
+    font-family: 'Raleway Regular';
+    font-size: 1rem;
+    line-height: 1.6em;
+}
+
+header, footer, nav, aside, summary, details, article, main, section{
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Raleway Bold';
+    line-height: 1.3;
+    margin: 1rem 0;
+}
+
+p{
+    margin: 0.6rem 0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    color: var(--primary-color-light);
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+/* Utility Classes */
+.hide-desktop{
+    display: none;
+}
+
+.show-desktop{
+    display: block;
+}
+
+.text-primary{
+    color: var(--primary-color-light);
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-upper{
+    text-transform: uppercase;
+}
+.lead-text{
+    font-size: 18px;
+}
+
+.bg-light{
+    background-color: #f4f4f4;
+}
+
+.bg-dark{
+    background-color: var(--dark-color);
+    color: #fff;
+}
+
+.section-title{
+    font-size: 35px;
+    margin-top: 40px;
+    text-align: center;
+    text-transform: uppercase;    
+}
+
+.section-title::after{
+    background-color: var(--dark-color);
+    content: "";
+    display: block;
+    height: 4px;
+    margin: 10px auto 0 auto;
+    width: 80px;
+}
+
+.btn{
+    border: 2px solid #fff;
+    background: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    text-align: center;
+    transition: all 0.3s ease-in;
+}
+
+.btn.btn-large{
+    font-size: 18px;
+    padding: 15px 10px;
+    width: 220px;
+}
+
+.btn.btn-small{
+    padding: 8px 14px;
+}
+
+.btn.btn-primary{
+    background-color: var(--primary-color-dark);
+    color: #fff;
+}
+
+.btn.btn-primary:hover{
+    background-color: var(--primary-color-light);
+}
+
+/* Navbar */
+#navbar{
+    background-color: var(--primary-color-dark);
+    border-bottom: 3px solid var(--primary-color-light);
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+
+#navbar #nav-menu{
+    display: flex;
+    padding-left: 6rem;
+
+}
+
+#navbar #nav-menu li a{
+    color: #fff;
+    display: block;
+    font-size: 15px;
+    padding: 15px 15px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#navbar #nav-menu li a.active,
+#navbar #nav-menu li a:hover{
+    background-color: var(--primary-color-light);
+    color: var(--dark-color);
+    font-weight: bolder;
+}
+
+/* Home Section */
+#home-section{
+    background-color: var(--light-color);
+    height: 100vh;
+}
+
+#home-section .home-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+#home-section .home-content h1{
+    font-family: 'Raleway Regular';
+    font-size: 45px;
+    margin: 0;
+}
+
+#home-section .home-content h2{
+    font-family: 'Raleway Regular';
+    font-size: 40px;
+    margin: 0;
+}
+
+#home-section .home-content .btn{
+    border: none;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+
+#home-section .home-content .btn i{
+    font-size: 15px;
+    padding-left: 5px;
+    transition: transform 0.3s ease-in;
+}
+
+#home-section .home-content .btn:hover i{
+    transform: translateY(-3px) rotate(90deg);
+}
+
+#home-section .home-content h2 .text-type .text{
+    border-right: 0.2rem solid var(--primary-color-light);
+}
+
+/* About Section */
+#about-section{
+    padding: 30px 80px;
+}
+
+#about-section .about-features{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    margin-top: 50px;
+    padding: 0 10px 0 10px;
+}
+
+.about-features .feature-item{
+    padding: 15px;
+    text-align: center;
+}
+
+.about-features .feature-item .feature-icon{
+    background-color: var(--primary-color-light);
+    border-radius: 50%;
+    color: #fff;
+    height: 100px;
+    line-height: 120px;
+    margin: auto;
+    text-align: center;
+    width: 100px;
+}
+
+.about-features .feature-item .feature-icon i{
+    font-size: 35px;
+}
+
+.about-features .feature-item h3{
+    color: #616161;
+    font-size: 25px;
+    margin: 0.8rem 0 0.4rem 0;
+}
+
+.about-features .feature-item p{
+    font-size: 1rem;
+    margin: 0.2rem 0;
+}
+
+#about-section .about-inner-content{
+    display: flex;
+    margin-top: 50px;
+}
+
+#about-section .about-inner-content > div{
+    flex: 1;
+    padding: 25px;
+}
+
+#about-section .about-inner-content > div h3{
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+#about-section .aboutinner-content > div:nth-child(2) h3{
+    margin-bottom: 1.6rem;
+}
+
+.about-inner-content .about-bio img{
+    border-radius: 50%;
+    display: block;
+    filter: grayscale(1);
+    margin: auto;
+    width: 270px;
+}
+
+.about-inner-content .about-bio p{
+    font-size: 16px;
+    padding: 0 1.3rem;
+}
+
+.about-inner-content .about-bio p a:hover{
+    text-decoration: underline;
+}
+
+.about-inner-content .about-skills{
+    padding-top: 1rem;
+}
+
+.about-skills .skill-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.about-skills .skill-item .skill-tag{
+    background-color: var(--primary-color-dark);
+    color: #fff;
+    font-size: 15px;
+    padding: 0 25px;
+}
+
+.about-skills .skill-item progress{
+    border-radius: 5px;
+    display: block;
+    flex: 5;
+    height: 25px;
+    position: relative;
+    widows: 100%;
+}
+
+.about-skills .skill-item progress::after{
+    position: absolute;
+    right: 8px;
+    top: 0;
+}
+
+.about-skills .skill-item #html-progress::after{
+    content: "90%";
+}
+
+.about-skills .skill-item #css-progress::after{
+    content: "85%";
+}
+
+.about-skills .skill-item #sass-progress::after{
+    content: "75%";
+}
+
+.about-skills .skill-item #bootstrap-progress::after{
+    content: "90%";
+}
+
+.about-skills .skill-item #js-progress::after{
+    content: "80%";
+}
+
+.about-skills .skill-item #react-progress::after{
+    content: "30%";
+}
+
+.about-skills .skill-item #python-progress::after{
+    content: "25%";
+}
+
+.about-skills .skill-item progress::-webkit-progress-bar{
+    background-color: var(--light-color);
+}
+
+.about-skills .skill-item progress::-moz-progress-bar{
+    background-color: var(--light-color);
+}
+
+.about-skills .skill-item progress::-ms-progress-bar{
+    background-color: var(--light-color);
+}
+
+.about-skills .skill-item progress::-webkit-progress-value{
+    background-color: var(--primary-color-light);
+}
+
+.about-skills .skill-item progress::-moz-progress-value{
+    background-color: var(--primary-color-light);
+}
+.about-skills .skill-item progress::-ms-progress-value{
+    background-color: var(--primary-color-light);
+}
+
+/* My Projects Section */
+#projects-section{
+    padding: 40px;
+}
+
+#projects-section .projects-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    margin-top: 50px;
+}
+
+.projects-grid .project-card{
+    position: relative;
+}
+
+.projects-grid .project-card .card-overlay{
+    background-color: rgba(244, 244, 244);
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+    transition: all 0.3s ease-in;
+    visibility: hidden;
+    z-index: 5;
+}
+
+.projects-grid .project-card .card-overlay h3{
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.projects-grid .project-card .card-overlay p{
+    font-size: 14px;
+    font-weight: 900;
+    margin-top: 0;
+}
+
+.projects-grid .project-card .card-overlay .btn{
+    color: var(--primary-color-light);
+    font-size: 16px;
+    border: 2px solid var(--primary-color-light);
+    margin: 10px auto 0 auto;
+    width: 170px;
+    padding: 8px 10px;
+    font-weight: bold;
+}
+
+.projects-grid .project-card .card-overlay .btn:hover{
+   background-color: var(--primary-color-light);
+   color: #fff;
+}
+
+.projects-grid .project-card:hover .card-overlay{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Blog Section */
+#blog-section{
+    margin-top: 50px;
+    padding: 20px 50px;
+}
+
+#blog-section .blog-posts{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.blog-posts .post:hover{
+    cursor: pointer;
+}
+
+.blog-posts .post:hover .post-title h3 a{
+    color: var(--primary-color-light);
+}
+
+.blog-posts .post .post-thumbnail{
+    overflow: hidden;
+}
+
+.blog-posts .post .post-thumbnail img{
+    max-height: 100%;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+
+.blog-posts .post .post-thumbnail img:hover{
+    transform: scale(1.2);
+}
+
+.blog-posts .post .post-title h3{
+    font-size: 22px;
+}
+
+.blog-posts .post .post-title h3 a{
+    color: var(--dark-color);
+}
+
+.blog-posts .post .post-meta::after{
+    background-color: var(--primary-color-light);
+    content: "";
+    display: block;
+    height: 4px;
+    margin: 25px 0 15px 0;
+    width: 100px;
+}
+
+.blog-posts .post .post-meta p{
+    font-size: 0.9rem;
+}
+
+.blog-posts .post .post-excerpt p{
+    font-size: 0.9rem;
+}
+
+.blog-posts .post .post-excerpt .btn{
+    margin-top: 8px;
+}
+
+.blog-posts .post .post-excerpt .btn i{
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+/* Contact Section */
+#contact-section{
+    margin-top: 80px;
+    padding: 50px 25px 150px 25px;
+}
+
+#contact-section .section-title::after{
+    background-color: #fff;
+}
+
+#contact-section #contact-tagline{
+    margin: 35px 0 45px 0;
+}
+
+#contact-section #contact-form{
+    margin: 30px auto 0 auto;
+    max-width: 600px;
+    position: relative;
+}
+
+#contact-section .form-group{
+    padding-bottom: 15px;
+}
+
+#contact-form input,
+#contact-form textarea{
+    border: none;
+    color: var(--light-color);
+    background-color: #000;
+    font-family: 'Raleway Regular';
+    font-size: 15px;
+    padding: 10px 14px;
+    width: 100%;
+}
+
+#contact-form .btn{
+    border-radius: 0;
+    color: #fff;
+    font-size: 1rem;
+    padding: 8px 10px;
+    position: absolute;
+    right: 0;
+    width: 150px;
+}
+
+#contact-form .btn:hover{
+    background-color: var(--primary-color-dark);
+    border-color: var(--primary-color-dark);
+}
+
+/* Scroll to Top */
+#scroll-top{
+    background-color: var(--primary-color-dark);
+    border-radius: 3px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: -26px;
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    transition: all 0.3s ease-in;
+    width: 50px;
+}
+
+#scroll-top:hover{
+    background-color: var(--primary-color-light);
+    transform: translateY(-10px);
+}
+
+#scroll-top i:nth-child(2){
+    margin-top: -8px;
+}
+
+/* Site Footer */
+#site-footer{
+    background-color: #000;
+    padding: 30px 10px;
+}
+
+#site-footer .social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.social-icons .social-icon{
+    background-color: var(--dark-color);
+    cursor: pointer;
+    height: 60px;
+    line-height: 70px;
+    width: 60px;
+    text-align: center;
+    transition: all 0.3s ease-in;
+}
+
+.social-icons .social-icon:hover{
+    background-color: var(--primary-color-light);
+}
+
+.social-icons .social-icon:not(:last-child){
+    margin-right: 20px;
+}
+
+.social-icons .social-icon i{
+    color: #fff;
+    font-size: 23px;
+}
+
+#site-footer .site-credit{
+    color: #fff;
+    margin-top: 25px;
+}
+
+
+/* Animations */
+.slidedown{
+    animation: slidedown 0.5s forwards ease-in;
+}
+
+.slideup{
+    animation: slideup 0.5s forwards ease-in;
+}
+
+@keyframes slidedown{
+    from{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideup{
+    from{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media(max-width: 1240px){
+    #projects-section .projects-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 900px){
+    #projects-section .projects-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 1024px){
+    #about-section{
+        padding: 13px;
+    }
+
+    #navbar #nav-menu{
+        padding-left: 0;
+    }
+
+    #navbar #nav-menu li a{
+        font-size: 1rem;
+    }
+
+    #about-section .about-inner-content .about-skills{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media(max-width: 980px){
+    #blog-section .blog-posts{
+        grid-template-columns: repeat(2, 1fr);
+    }    
+}
+
+@media(max-width: 968px){
+    /* About Section */
+    #about-section .about-features{
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 80px;
+    }
+
+    #about-section .about-inner-content{
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+}
